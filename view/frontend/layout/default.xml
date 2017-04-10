@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="magesetup.product.price.details" template="Zorn_Kleinunternehmen::product/price/details.phtml"/>
+        <referenceBlock name="paypal.express.review.details" as="details" template="Zorn_Kleinunternehmen::express/review/details.phtml" />
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="itemsAfter" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">140</item>
+                                                    <item name="displayArea" xsi:type="string">kleinunternehmen</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="additional_block" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Zorn_Kleinunternehmen/js/view/checkout/kleinunternehmen</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
